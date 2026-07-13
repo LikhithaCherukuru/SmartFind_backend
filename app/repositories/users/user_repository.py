@@ -1,4 +1,4 @@
-from app.core.database import supabase_admin
+from app.core.database import supabase
 
 
 class UserRepository:
@@ -6,7 +6,7 @@ class UserRepository:
     def get_profile(self, user_id: str):
 
         return (
-            supabase_admin
+            supabase
             .table("profiles")
             .select("*")
             .eq("id", user_id)
@@ -21,7 +21,7 @@ class UserRepository:
     ):
 
         return (
-            supabase_admin
+            supabase
             .table("profiles")
             .update(data)
             .eq("id", user_id)

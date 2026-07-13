@@ -9,6 +9,10 @@ from app.api.users.routes import (
     router as user_router
 )
 
+from app.api.files.routes import router as file_router
+
+from app.api.indexing.routes import router as indexing_router
+
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
@@ -16,6 +20,8 @@ app = FastAPI(
 
 app.include_router(auth_router)
 app.include_router(user_router)
+app.include_router(file_router)
+app.include_router(indexing_router)
 
 @app.get("/")
 def home():

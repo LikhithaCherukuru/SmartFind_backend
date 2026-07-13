@@ -28,3 +28,16 @@ python-magic
 pytest
 
 pytest-asyncio 
+
+PyMuPDF
+python-docx
+python-pptx
+pytesseract
+Pillow
+
+openai
+
+python-dotenv
+
+sentence-transformers==5.1.0
+torch>=2.7.0

@@ -1,4 +1,6 @@
-from app.core.database import supabase, supabase_admin
+from app.core.database import get_supabase
+
+supabase = get_supabase()
 
 
 class AuthRepository:
@@ -37,7 +39,7 @@ class AuthRepository:
     ):
 
         return (
-            supabase_admin
+            supabase
             .table("profiles")
             .insert(
                 {
